@@ -1,0 +1,29 @@
+title : "dev &middot; oops"
+subtitle: "/d<span>ɪˈ</span>v<span>ʊ</span>ps/"
+tagline: "1 <em>n</em> the act or process of mistakenly developing 2 <em>int</em> used to express mild dismay at development blunder: <em>I accidentally the dev</em>"
+author :
+  name : Lisa Walley
+  github : lwalley
+  twitter : lswalley
+
+navigation :
+#  - archive.html
+#  - tags.html
+#  - categories.html
+#  - pages.html
+#  - about.md
+
+social :
+  - label : LinkedIn
+    url : http://linkedin.com/in/lisawalley
+  - label : GitHub
+    url : https://github.com/lwalley
+  - label : Drupal
+    url : http://drupal.org/user/604534
+  - label : Google+
+    url : http://gplus.to/lisawalley
+  - label : Facebook
+    url : http://www.facebook.com/lswalley
+  - label : Twitter
+    url : https://twitter.com/lswalley
+

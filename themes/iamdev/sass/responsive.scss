@@ -1,0 +1,96 @@
+//
+// @file responsive.scss
+// Positioning and sizing, mobile first.
+
+@import "base";
+
+@mixin adjust-base-gutter($adjustment) {
+  //@include zen-grid-item-base($zen-gutter-width * $adjustment);
+}
+
+body {
+  > div {
+    @include zen-grid-container();
+    > header, > div, > footer {
+      @include zen-grid-item-base();
+      @include zen-clear();
+      @include zen-grid-item($zen-column-count, 1);
+    }
+    > header, > footer {
+      // @note zen-nested-container() must come after zen-grid-item().
+      @include zen-nested-container();
+    }
+    > header {
+      dl {
+        @include zen-grid-item-base();
+        @include zen-grid-item($zen-column-count, 1);
+        dt a {
+          display: inline-block;
+          padding-right: rhythm(0.2);
+          + span {
+            display: block;
+          }
+        }
+      }
+    }
+    > footer {
+      div {
+        text-align: right;
+        @include zen-grid-item-base();
+        @include zen-grid-item($zen-column-count, 1);
+      }
+      p {
+        @include padding-leader(3);
+        @include zen-grid-item-base();
+        @include zen-grid-item($zen-column-count, 1);
+      }
+    }
+  }
+}
+
+// As screens get wider we want larger font-sizes and more whitespace.
+@media all and (min-width: 1em / 16 * 481) and (max-width: 1em / 16 * 1023) {
+  @include adjust-base-gutter(2);
+  @include increase-base-font-sizes(1.3);
+}
+@media all and (min-width: 1em / 16 * 1024) {
+  @include adjust-base-gutter(3);
+  @include increase-base-font-sizes(1.4);
+}
+@media all and (min-width: 1em / 16 * 481) {
+  body > div > header dl {
+    dt a + span {
+      display: inline-block;
+    }
+    dd {
+      @include zen-grid-flow-item(9, 12);
+    }
+  }
+}
+@media all and (min-width: 1em / 16 * 680) {
+  body > div > header dl dd {
+    @include zen-grid-flow-item(7, 12);
+  }
+}
+@media all and (min-width: 1em / 16 * 900) {
+  body > div > header dl dd {
+    @include zen-grid-flow-item(6, 12);
+  }
+}
+@media all and (min-width: 1em / 16 * 1350) {
+  body {
+    > div {
+      > header dl dd {
+        @include zen-grid-flow-item(4, 12);
+      }
+      > footer {
+        div {
+          @include zen-grid-item(6, 7);
+        }
+        p {
+          @include zen-grid-item(4, 1);
+        }
+      }
+    }
+  }
+}

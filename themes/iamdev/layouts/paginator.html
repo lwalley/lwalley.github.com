@@ -1,0 +1,22 @@
+---
+layout : default
+---
+
+{{#posts.paginator}}
+  <h3><a href="{{url}}">{{title}}</a> <span>{{ date }}</span></h3>
+  {{{ summary }}}
+  <a href="{{url}}">more..</a>
+{{/posts.paginator}}
+
+{{#posts.paginator_navigation}}
+  <ul>
+  {{#posts.paginator_navigation}}
+    {{#is_active_page}}
+      <li class="active"><a href="{{url}}">{{name}}</a></li>
+    {{/is_active_page}}
+    {{^is_active_page}}
+      <li><a href="{{url}}">{{name}}</a></li>
+    {{/is_active_page}}
+  {{/posts.paginator_navigation}}
+  </ul>
+{{/posts.paginator_navigation}}

@@ -1,0 +1,78 @@
+@import "base";
+
+header {
+  dl {
+    font-family: $fanwood;
+  }
+  dt {
+    a {
+      @include adjust-font-size-and-rhythm(4);
+      text-decoration: none;
+      &:visited {
+        color: black;
+      }
+    }
+    > span {
+      @include adjust-font-size-and-rhythm(2);
+      > span {
+        font-weight: normal;
+        font-size: 0.85em;
+      }
+    }
+  }
+  dd {
+    @include adjust-font-size-to(1.5 * $base-font-size);
+    @include adjust-leading-to(1.2, 1.5 * $base-font-size);
+    margin: 0;
+  }
+}
+
+footer {
+  a {
+    height: 32px;
+    min-width: 50px;
+    display: inline-block;
+    &:nth-of-type(1) {
+      @include replace-text('../media/icons/linkedin.png', 0, 0)
+    }
+    &:nth-of-type(2) {
+      @include replace-text('../media/icons/github.png', 0, 0)
+    }
+    &:nth-of-type(3) {
+      @include replace-text('../media/icons/drupal.png', 0, 0)
+    }
+    &:nth-of-type(4) {
+      @include replace-text('../media/icons/googleplus.png', 0, 0)
+    }
+    &:nth-of-type(5) {
+      @include replace-text('../media/icons/twitter.png', 0, 0)
+    }
+    &:nth-of-type(6) {
+      @include replace-text('../media/icons/facebook.png', 0, 0)
+    }
+    &:hover {
+      &:nth-of-type(1) {
+        @include replace-text('../media/icons/linkedin_on.png', 0, 0)
+      }
+      &:nth-of-type(2) {
+        @include replace-text('../media/icons/github_on.png', 0, 0)
+      }
+      &:nth-of-type(3) {
+        @include replace-text('../media/icons/drupal_on.png', 0, 0)
+      }
+      &:nth-of-type(4) {
+        @include replace-text('../media/icons/googleplus_on.png', 0, 0)
+      }
+      &:nth-of-type(5) {
+        @include replace-text('../media/icons/twitter_on.png', 0, 0)
+      }
+      &:nth-of-type(6) {
+        @include replace-text('../media/icons/facebook_on.png', 0, 0)
+      }
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+}
