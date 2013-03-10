@@ -29,50 +29,50 @@ header {
 
 footer {
   a {
-    height: 32px;
+    height: 34px;
     min-width: 50px;
     display: inline-block;
+    @include hide-text;
     &:nth-of-type(1) {
-      @include replace-text('../media/icons/linkedin.png', 0, 0)
+      @include icons-smaller-sprite(linkedin);
     }
     &:nth-of-type(2) {
-      @include replace-text('../media/icons/github.png', 0, 0)
+      @include icons-smaller-sprite(github);
     }
     &:nth-of-type(3) {
-      @include replace-text('../media/icons/drupal.png', 0, 0)
+      @include icons-smaller-sprite(drupal);
     }
     &:nth-of-type(4) {
-      @include replace-text('../media/icons/googleplus.png', 0, 0)
+      @include icons-smaller-sprite(googleplus);
     }
     &:nth-of-type(5) {
-      @include replace-text('../media/icons/twitter.png', 0, 0)
+      @include icons-smaller-sprite(twitter);
     }
     &:nth-of-type(6) {
-      @include replace-text('../media/icons/facebook.png', 0, 0)
+      @include icons-smaller-sprite(facebook);
     }
     &:hover {
       &:nth-of-type(1) {
-        @include replace-text('../media/icons/linkedin_on.png', 0, 0)
+        @include icons-smaller-sprite(linkedin_on);
       }
       &:nth-of-type(2) {
-        @include replace-text('../media/icons/github_on.png', 0, 0)
+        @include icons-smaller-sprite(github_on);
       }
       &:nth-of-type(3) {
-        @include replace-text('../media/icons/drupal_on.png', 0, 0)
+        @include icons-smaller-sprite(drupal_on);
       }
       &:nth-of-type(4) {
-        @include replace-text('../media/icons/googleplus_on.png', 0, 0)
+        @include icons-smaller-sprite(googleplus_on);
       }
       &:nth-of-type(5) {
-        @include replace-text('../media/icons/twitter_on.png', 0, 0)
+        @include icons-smaller-sprite(twitter_on);
       }
       &:nth-of-type(6) {
-        @include replace-text('../media/icons/facebook_on.png', 0, 0)
+        @include icons-smaller-sprite(facebook_on);
       }
     }
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
   }
-
 }

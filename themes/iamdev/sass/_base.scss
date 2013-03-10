@@ -57,3 +57,6 @@ $zen-auto-include-item-base: false;
 @import "zen"; // Add the Zen Grids responsive layout mixins.
 
 @import "custom";
+
+@import "icons-smaller/*.png";
+@import "icons-larger/*.png";
