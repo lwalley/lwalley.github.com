@@ -1,31 +1,28 @@
-GIT
-  remote: git://github.com/ruhoh/ruhoh.rb.git
-  revision: af92ff0acb12aa64b36eb997eae88931170ddb7c
-  specs:
-    ruhoh (2.0.alpha.3)
-      directory_watcher (~> 1.4)
-      mustache (~> 0.99)
-      nokogiri (~> 1.5)
-      rack (~> 1.4)
-      redcarpet (~> 2.1)
-
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
-    chunky_png (1.2.7)
+    chunky_png (1.2.9)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
     directory_watcher (1.4.1)
     fssm (0.2.10)
-    mustache (0.99.4)
-    nokogiri (1.5.6)
+    mini_portile (0.5.2)
+    mustache (0.99.5)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     psych (1.3.4)
     rack (1.5.2)
-    redcarpet (2.2.2)
-    sass (3.2.7)
-    zen-grids (1.3)
+    redcarpet (2.3.0)
+    ruhoh (2.1)
+      directory_watcher (~> 1.4.0)
+      mustache (~> 0.99)
+      nokogiri (~> 1.5)
+      rack (~> 1.4)
+      redcarpet (~> 2.1)
+    sass (3.2.13)
+    zen-grids (1.4)
       sass (>= 3.1)
 
 PLATFORMS
@@ -34,6 +31,6 @@ PLATFORMS
 DEPENDENCIES
   compass
   psych (~> 1.3)
-  ruhoh!
+  ruhoh (= 2.1)
   sass
   zen-grids

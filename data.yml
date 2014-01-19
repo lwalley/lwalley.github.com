@@ -1,17 +1,17 @@
-title : "Lisa Walley"
-subtitle: ""
-tagline: ""
+title : Lisa Walley
+tagline:
 author :
   name : Lisa Walley
+  email :
   github : lwalley
   twitter : lswalley
 
-navigation :
-#  - archive.html
-#  - tags.html
-#  - categories.html
-#  - pages.html
-#  - about.md
+#navigation :
+#  - archive
+#  - tags
+#  - categories
+#  - pages
+#  - about
 
 social :
   - label : LinkedIn

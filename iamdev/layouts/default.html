@@ -15,8 +15,16 @@
     <![endif]-->
 
     <!-- Le styles -->
-    {{{ stylesheets.all }}}
-    {{{ javascripts.all }}}
+    {{# stylesheets.load }}
+      normalize.css
+      responsive.css
+      style.css
+    {{/ stylesheets.load }}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+    {{# javascripts.load }}
+      weva.js
+    {{/ javascripts.load }}
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -41,9 +49,9 @@
         </dl>
         {{# data.navigation }}
           <ul>
-          {{# data.navigation?to_pages }}
+          {{# data.navigation?to__root }}
             {{> pages_list }}
-          {{/ data.navigation?to_pages }}
+          {{/ data.navigation?to__root }}
           </ul>
         {{/ data.navigation }}
       </header>
