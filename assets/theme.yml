@@ -1,0 +1,20 @@
+{
+  "exclude" : [
+    "layouts",
+    "sass",
+    "sass-extensions"
+  ],
+  "stylesheets" : {
+    "default" : [
+      "normalize.css",
+      "responsive.css",
+      "style.css"
+    ],
+    "widgets" : {
+    }
+  },
+  "javascript" : {
+    "default" : [
+    ]
+  }
+}

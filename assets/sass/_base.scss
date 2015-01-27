@@ -1,0 +1,62 @@
+// "base" partial
+// Includes default variables and shared plugins (partials).
+// Add @import "base" declaration to .scss files to use this partial.
+
+// @see http://compass-style.org/reference/compass/support/
+// IE6-7 don't support box-sizing: border-box.
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+$base-font-size:   14px;
+$base-line-height: 1.5 * $base-font-size;
+
+// Font-stacks
+@font-face {
+  font-family: fanwood;
+  src: local(fanwood), url('../fonts/fanwood-webfont.ttf') format('opentype');
+}
+@font-face {
+  font-family: fanwood_italic;
+  src: local(fanwood_italic), url('../fonts/fanwood_italic-webfont.ttf') format('opentype');
+}
+@font-face {
+  font-family: fanwood_text;
+  src: local(fanwood_text), url('../fonts/fanwood_text-webfont.ttf') format('opentype');
+}
+@font-face {
+  font-family: fanwood_text_italic;
+  src: local(fanwood_text_italic), url('../fonts/fanwood_text_italic-webfont.ttf') format('opentype');
+}
+
+$fanwood:      fanwood, 'Times New Roman', Times, serif;
+$fanwood-text: fanwood_text, 'Times New Roman', Times, serif;
+
+$font-monospace: 'Courier New', Courier, monospace;
+$base-font-family: $fanwood_text;
+$indent-amount:    1em;
+
+// Default Zen Grids settings, mobile first.
+$zen-column-count:  12;
+$zen-gutter-width:  $base-line-height * 2;
+// More efficient if we set item-base manually.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+// Include plugins
+@import "compass/support";
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/sprites"; // See http://compass-style.org/help/tutorials/spriting/
+@import "compass/css3"; // Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/typography/vertical_rhythm";
+@import "compass/typography/lists/horizontal-list";
+@import "compass/typography/lists/inline-list";
+@import "compass/typography/lists/inline-block-list";
+@import "compass/typography/text/replacement";
+@import "zen"; // Add the Zen Grids responsive layout mixins.
+
+@import "custom";
+
+@import "icons-smaller/*.png";
+@import "icons-larger/*.png";

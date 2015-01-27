@@ -1,0 +1,75 @@
+@import "base";
+
+header {
+  dl {
+    font-family: $fanwood;
+  }
+  dt {
+    a {
+      @include adjust-font-size-and-rhythm(4);
+      text-decoration: none;
+      &:visited {
+        color: black;
+      }
+    }
+    > span {
+      @include adjust-font-size-and-rhythm(2);
+      > span {
+        font-weight: normal;
+        font-size: 0.85em;
+      }
+    }
+  }
+  dd {
+    @include adjust-font-size-to(1.5 * $base-font-size);
+    @include adjust-leading-to(1.2, 1.5 * $base-font-size);
+    margin: 0;
+  }
+}
+
+footer {
+  a {
+    height: 34px;
+    min-width: 50px;
+    display: inline-block;
+    @include hide-text;
+    &:nth-of-type(1) {
+      @include icons-smaller-sprite(linkedin);
+    }
+    &:nth-of-type(2) {
+      @include icons-smaller-sprite(github);
+    }
+    &:nth-of-type(3) {
+      @include icons-smaller-sprite(drupal);
+    }
+    &:nth-of-type(4) {
+      @include icons-smaller-sprite(googleplus);
+    }
+    &:nth-of-type(5) {
+      @include icons-smaller-sprite(twitter);
+    }
+    &:nth-of-type(6) {
+      @include icons-smaller-sprite(facebook);
+    }
+    &:hover {
+      &:nth-of-type(1) {
+        @include icons-smaller-sprite(linkedin_on);
+      }
+      &:nth-of-type(2) {
+        @include icons-smaller-sprite(github_on);
+      }
+      &:nth-of-type(3) {
+        @include icons-smaller-sprite(drupal_on);
+      }
+      &:nth-of-type(4) {
+        @include icons-smaller-sprite(googleplus_on);
+      }
+      &:nth-of-type(5) {
+        @include icons-smaller-sprite(twitter_on);
+      }
+      &:nth-of-type(6) {
+        @include icons-smaller-sprite(facebook_on);
+      }
+    }
+  }
+}
